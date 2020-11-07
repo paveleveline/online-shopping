@@ -1,0 +1,202 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.container { 
+position: relative;
+}
+
+header { 
+color: white;
+height: 250px; 
+background-image: url(../assets/header.jpg); 
+background-size: 100%;  
+background-repeat: no-repeat;
+background-position: center;
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+}
+
+.left-elements-wrapper { 
+padding: 2em 4em;
+}
+
+.left-elements-wrapper h1,h2 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+.left-elements-wrapper h1 {
+    text-transform: uppercase;
+    font-size: 2.3em;
+}
+
+.left-elements-wrapper h2 {
+    font-size: 1.1em;
+
+}
+
+.button-wrapper button {
+margin-top: 1em;
+border: none;
+border-radius: 35%;    
+width: 70px;
+height: 30px;
+background-color: white;
+cursor: pointer;
+}
+
+.piggy-image { 
+padding: 0em 10em 2em 0;
+width: 200px;
+height: 200px;
+}
+
+.piggy-image img { 
+width: 100%;
+height: auto;
+}
+
+.navigation-menu-wrapper { 
+display: flex;
+justify-content: center;
+align-items: center;
+height: 120px;  
+width: 100%;
+}
+
+nav a { 
+text-decoration: none;
+padding: 0 30px;
+color: #333333;
+}
+
+nav a.highlighted { 
+background-color: #f8d9e0;
+width: 70px;
+height: 30px;
+border-radius: 35%;
+}
+
+main {
+    min-height: 720px;
+    color: #333333;
+    padding-left: 4em;
+}
+
+.cattegories-wrapper { 
+width: 100%;
+}
+
+.cattegories-wrapper h1{ 
+font-size: 1.3em;
+}
+
+.buttons-cattegories { 
+    cursor: pointer;   
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-cattegories button { 
+    background-color: #e7e8e9;
+    border: none;
+    border-radius: 15%;    
+    width: 200px;
+    height: 70px;
+    color: #333333;
+}
+
+.photos-content-wrapper { 
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;    
+}
+
+.single-coat-wrapper { 
+box-sizing: border-box;
+width: 23%;
+height: 400px;
+margin-right: 20px;
+margin-bottom: 20px;    
+}
+
+.name-and-price-wrapper { 
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 15px;   
+    font-size: 0.9em;
+}
+
+.picture-coat { 
+width: 100%;  
+height: 92%;  
+background-image: url(../assets/coats/coat-1.jpg);
+background-position: center;
+background-size: 100%;
+background-repeat: no-repeat;
+}
+
+.name-and-price-wrapper { 
+font-size: 1.1em;    
+}
+
+.name-coat { 
+    color: #333333;
+}
+
+.price-coat { 
+    color: #828282;
+}
+
+.overlay-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+.cart-selection { 
+width: 300px;
+height: 500px;
+/*TO DO: prin JS data-id poza
+background-image: ; aici trebuie sa pun poza selectata cu construit de URL */
+background-size: cover;
+}
+
+.close-icon {
+width: 30px;
+height: 30px;  
+position: absolute;
+z-index: 2;
+right: 1em;
+top: 1em;
+cursor: pointer;
+}
+
+.close-icon img {
+width: 100%;
+height: auto;    
+}
+
+.hidden { 
+    display: none;
+}
