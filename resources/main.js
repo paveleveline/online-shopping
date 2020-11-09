@@ -5,6 +5,7 @@ let pictureSelected = [];
 const photosContentWrapper = $('.photos-content-wrapper');
 const overlayContentWrapper = $('.overlay-content-wrapper');
 const cartSelection = $('.cart-selection'); 
+// ti-ar fi adus puncte frumoase sa implementezi click-ul si pe butonul asta si ar fi fost ceva foarte simplu pentru tine
 const closeBtn = $('.close-icon');
 const showOverlay = $('.overlay');
 
@@ -30,6 +31,8 @@ for(let i=0; i<products.coats.length; i++){
 
     photosContentWrapper.delegate('.picture-coat', "click", function(){
         const id = $(this).parents('.single-coat-wrapper').data('id');
+        
+        // nu ai nevoie de sectiunea asta in proiectul asta. Dincolo aveai nevoie pentru ca aveai un array de favorites unde voiai sa stii ce ai adaugat, dar aici ai un simplu click un overlay care arata datele respective
         if(jQuery.inArray(id, pictureSelected) === -1){
             pictureSelected.push(id);
         }else { 
