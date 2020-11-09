@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Online shopping</title>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="resources/main.css">
         <script src="bundles/jquery/jquery-3.5.1.min.js"></script>
     </head>
@@ -57,13 +57,57 @@
                     <div class="overlay hidden">
                         <div class="overlay-content-wrapper">
                        
-                            <section class="cart-selection"></section>
-                       
+                            <section class="cart-selection">
+
+                                <div class="details-selection">
+
+                                    <div class="name-price-size-wrapper">
+                                        <div class="name">Blazer Coat</div>
+                                        <div class="price">$60</div>
+                                        <div class="size">
+                                            <form>
+                                              <div class="size-wrapper">
+                                                <h2>Your Size</h2>
+                                                <input type="text" name="sizeS" id="size" value="S">
+                                                <label for="size">S</label>  
+                                                <input type="text" name="sizeM" id="size" value="M">
+                                                <label for="size">M</label>  
+                                                <input type="text" name="sizeL" id="size" value="L">
+                                                <label for="size">L</label>  
+                                                <input type="text" name="sizeXL" id="size" value="XL">
+                                                <label for="size">XL</label>  
+                                              </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                        <div class="options-button-wrapper">
+                                            <nav>
+                                                <a href="details.html">Details</a> 
+                                                <a href="order.html">Order</a> 
+                                                <a href="payment.html">Payment</a> 
+                                            </nav>
+                                        </div>
+
+                                        <div class="composition-and-country-wrapper">
+                                            <div class="composition">Composition
+                                                <div>100% polyester</div>
+                                            </div>
+                                            <div class="country">Country
+                                                <div>Poland</div>
+                                            </div>
+                                        </div>
+                                        <div class="care-wrapper">Care
+                                            <div>Follow the care label on your coat when you cleaning and treat any stains promptly by blotting.</div>
+                                        </div>
+                                        <div class="add-to-cart-wrapper">
+                                            <button>Add to Cart</button>
+                                        </div>
+                                </div>
+                            </section>
                              <div class="close-icon">
                                  <img src="assets/close.png" alt="close-button">
                              </div>   
                             </div>
-
                     </div>
                     <section>
                         <div class="cattegories-wrapper">
@@ -76,7 +120,6 @@
                             </div>
                         </div>
                     </section>
-
                 </div>
             </main>
         </div>
@@ -84,10 +127,3 @@
         <script src="resources/main.js"></script>
     </body>
 </html>
-
-
-
-
-
-
-

@@ -1,6 +1,6 @@
 $(function() { 
 
-let pictureSelected = [];
+let pictureSelected = $('.picture-coat');
 
 const photosContentWrapper = $('.photos-content-wrapper');
 const overlayContentWrapper = $('.overlay-content-wrapper');
@@ -26,23 +26,33 @@ for(let i=0; i<products.coats.length; i++){
     let productObj = products.coats[i];
     productHTML = getproductHTML(productObj);
     photosContentWrapper.append(productHTML);
+
     }
 
-    photosContentWrapper.delegate('.picture-coat', "click", function(){
-        const id = $(this).parents('.single-coat-wrapper').data('id');
-        if(jQuery.inArray(id, pictureSelected) === -1){
-            pictureSelected.push(id);
-        }else { 
-            pictureSelected.splice(pictureSelected.indexOf(id), 1);
-        }
-            console.log(pictureSelected);
-        
-            if(pictureSelected.length>0 ){
-                showOverlay.removeClass('hidden');
-            } else{
-                showOverlay.addClass('hidden');
-            }
+    photosContentWrapper.delegate('.picture-coat',"click", function(){
+    const id = $(this).parents('.single-coat-wrapper').data('id');
+    console.log(id);
+
+    if(pictureSelected){
+        showOverlay.removeClass('hidden');
+    } else{
+        showOverlay.addClass('hidden');
+    }
+
+    cartSelection.css({backgroundImage: "url(assets/coats/coat-" + id + ".jpg" + ")"});   
+    
+   const productItem = products.coats[id-1];
+    console.log(productItem);
+  $('.name-price-size-wrapper .name').html(productItem.name);
+  $('.name-price-size-wrapper .price').html(productItem.currency + productItem.price);
+  $('.composition-and-country-wrapper .composition div').html(productItem.composition);
+  $('.composition-and-country-wrapper .country div').html(productItem.country);
+  $('.care-wrapper div').html(productItem.care);
+     
     });
 
-
+    closeBtn.click(function(){
+    showOverlay.addClass('hidden');
+    });
+        
 });

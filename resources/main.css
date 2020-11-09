@@ -13,14 +13,13 @@ position: relative;
 
 header { 
 color: white;
-height: 250px; 
+height: 350px; 
 background-image: url(../assets/header.jpg); 
 background-size: 100%;  
 background-repeat: no-repeat;
-background-position: center;
+background-position: bottom;
 display: flex;
 align-items: flex-end;
-justify-content: space-between;
 }
 
 .left-elements-wrapper { 
@@ -29,102 +28,81 @@ padding: 2em 4em;
 
 .left-elements-wrapper h1,h2 {
     font-weight: lighter;
-    margin: 0;
 }
 
 .left-elements-wrapper h1 {
     text-transform: uppercase;
-    font-size: 2.3em;
+    font-size: 2.8em;
+    margin-bottom: 0.4em;
 }
 
 .left-elements-wrapper h2 {
-    font-size: 1.1em;
-
+    font-size: 1.2em;
+    margin: 0;
 }
 
 .button-wrapper button {
-margin-top: 1em;
+padding: 0.8em;    
+margin-top: 1.7em;
 border: none;
-border-radius: 35%;    
-width: 70px;
-height: 30px;
+border-radius: 20px;    
+width: 90px;
+height: 35px;
 background-color: white;
 cursor: pointer;
+color: #333333;
 }
 
-.piggy-image { 
-padding: 0em 10em 2em 0;
-width: 200px;
-height: 200px;
+.right-elements-wrapper { 
+display: flex;
+align-self: center;
+justify-content: flex-end;
+width: 50%;
 }
 
-.piggy-image img { 
-width: 100%;
-height: auto;
+main {
+    min-height: 900px;
+    color: #333333;
 }
 
 .navigation-menu-wrapper { 
 display: flex;
 justify-content: center;
 align-items: center;
-height: 120px;  
+height: 140px;  
 width: 100%;
 }
 
-nav a { 
+.navigation-menu-wrapper nav a { 
 text-decoration: none;
-padding: 0 30px;
+padding: 10px 45px;
 color: #333333;
+width: 70px;
+height: 45px;
+border-radius: 20px;
 }
 
 nav a.highlighted { 
 background-color: #f8d9e0;
-width: 70px;
-height: 30px;
-border-radius: 35%;
 }
 
-main {
-    min-height: 720px;
-    color: #333333;
-    padding-left: 4em;
-}
-
-.cattegories-wrapper { 
-width: 100%;
-}
-
-.cattegories-wrapper h1{ 
-font-size: 1.3em;
-}
-
-.buttons-cattegories { 
-    cursor: pointer;   
-    display: flex;
-    justify-content: space-between;
-}
-
-.buttons-cattegories button { 
-    background-color: #e7e8e9;
-    border: none;
-    border-radius: 15%;    
-    width: 200px;
-    height: 70px;
-    color: #333333;
-}
-
-.photos-content-wrapper { 
+.photos-content-wrapper {
     display: flex;
     flex-wrap: wrap;
     height: 100%;    
+    padding: 0em 4em;
 }
 
 .single-coat-wrapper { 
 box-sizing: border-box;
-width: 23%;
-height: 400px;
+width: 23.7%;
+height: 460px;
 margin-right: 20px;
 margin-bottom: 20px;    
+}
+
+.single-coat-wrapper:last-of-type {
+    margin-right: 0;    
 }
 
 .name-and-price-wrapper { 
@@ -141,6 +119,7 @@ background-image: url(../assets/coats/coat-1.jpg);
 background-position: center;
 background-size: 100%;
 background-repeat: no-repeat;
+cursor: pointer;
 }
 
 .name-and-price-wrapper { 
@@ -155,6 +134,27 @@ font-size: 1.1em;
     color: #828282;
 }
 
+.cattegories-wrapper h1{     
+font-size: 1.3em;
+padding: 1em 0em 1em 3em;
+}
+
+.buttons-cattegories { 
+    padding: 0 4em;  
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-cattegories button { 
+    background-color: #e7e8e9;
+    border: none;
+    border-radius: 15px;    
+    width: 22%;
+    height: 120px;
+    color: #333333;
+    cursor: pointer; 
+}
+
 .overlay-content-wrapper {
     width: 100%;
     height: 100%;
@@ -166,7 +166,7 @@ font-size: 1.1em;
 .overlay {
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
@@ -176,19 +176,123 @@ font-size: 1.1em;
 
 .cart-selection { 
 width: 300px;
-height: 500px;
-/*TO DO: prin JS data-id poza
-background-image: ; aici trebuie sa pun poza selectata cu construit de URL */
-background-size: cover;
+height: 600px;
+background-image: url(../assets/coats/coat-4.jpg);
+background-size: 50%;
+background-repeat: repeat;
+position: relative;
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+color: #333333;
+}
+
+.details-selection { 
+width: 100%;
+height: 73%;
+border-radius: 25px;
+background-color: white;
+position: absolute;
+bottom: 0;
+}
+
+.name-price-size-wrapper .name { 
+padding: 1.3em 0em 0em 1em;
+font-size: 1.7em;
+font-weight: 700;
+}
+
+.name-price-size-wrapper .price { 
+padding: 0.5em 0em 0em 1.2em;
+font-size: 1.5em;
+}
+
+.price, .composition > div , .country > div, .care-wrapper > div { 
+color: #828282;
+}
+.size-wrapper {
+padding: 1em 2em;  
+}
+
+.size-wrapper h2 { 
+font-size: 1em;
+}
+
+.size-wrapper label { 
+display: none;    
+}
+
+.size-wrapper input { 
+width: 14px; 
+height: 14px;   
+text-align: center;
+padding: 0.3em;
+color: #828282;
+border-radius: 3px;
+box-shadow: 0px 2px 2px #999;
+border: none;
+margin-right: 0.4em;
+cursor: pointer;
+}
+
+.options-button-wrapper {
+display: flex;
+justify-content: space-between;
+}
+
+.options-button-wrapper nav { 
+padding: 2.5em 0em 1em 1.4em;
+}
+
+.options-button-wrapper nav a { 
+text-decoration: none;
+padding: 7px 20px;
+color: #333333;
+border-radius: 15px;
+background-color: #e7e8e9;
+margin-left: 5px;
+}
+
+.options-button-wrapper nav a:first-of-type { 
+background-color: #f8d9e0;
+}
+
+.composition-and-country-wrapper {
+display: flex;
+justify-content: space-between;
+padding: 1.5em 2em 0.5em 2em;
+}   
+
+.care-wrapper {
+padding: 1em 2em;   
+}
+
+.care-wrapper div{
+padding-top: 0.7em;
+}
+
+.add-to-cart-wrapper { 
+width: 100%;
+display: flex;
+justify-content: center;
+}
+
+.add-to-cart-wrapper button { 
+width: 88%;
+padding: 7px 15px;
+color: #e7e8e9;
+background-color: #333333;
+border: none;
+border-radius: 15px;
+cursor: pointer;
 }
 
 .close-icon {
-width: 30px;
-height: 30px;  
+width: 45px;
+height: 45px;  
 position: absolute;
 z-index: 2;
-right: 1em;
-top: 1em;
+right: 2em;
+top: 2em;
 cursor: pointer;
 }
 
