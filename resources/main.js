@@ -33,6 +33,7 @@ for(let i=0; i<products.coats.length; i++){
 
     photosContentWrapper.delegate('.picture-coat',"click", function(){
     const id = $(this).parents('.single-coat-wrapper').data('id');
+    const index = $(this).parents('.single-coat-wrapper').data('index');
     console.log(id);
 
     // nu ai nevoie de if-ul acesta pe selectie, in pictureSelected ai o selectie, nu un boolean si mereu vei avea o selectie deci if-ul e redundant. pur si simplu la click pe produs overlay-ul tau trebuie sa apara, va fi inchis de la iconita de close si doar asta e posibilul flow
@@ -46,10 +47,11 @@ for(let i=0; i<products.coats.length; i++){
     cartSelection.css({backgroundImage: "url(assets/coats/coat-" + id + ".jpg" + ")"});   
     
     // este riscant si aici sa consideri ca id-ul are vreun impact asupra pozitiei, pentru ca nu o are, este o simpla coincidenta, id-urile de asemenea se pot modifica usor atat din FE cat si din database
-   const productItem = products.coats[id-1];
+   //const productItem = products.coats[id-1];
+   const productItem = products.coats[index];
     console.log(productItem);
 
-    console.log($(this).parents('.single-coat-wrapper').data('index'));
+    //console.log($(this).parents('.single-coat-wrapper').data('index'));
 
 
     // o solutie frumoasa era sa folosesti find aici  $('.name-price-size-wrapper').find('.name')
